@@ -57,6 +57,8 @@ def driver(request):
             "profile.password_manager_enabled": False,
             "profile.password_manager_leak_detection": False,
         })
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
         drv = webdriver.Chrome(options=options)
 
     drv.implicitly_wait(0)
